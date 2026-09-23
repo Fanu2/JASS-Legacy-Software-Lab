@@ -276,9 +276,10 @@ JASS-Legacy-Software-Lab/
     ├── dbf-converter/
     └── legacy-data-tools/
 ```
+JASS-Legacy-Software-Lab
 
-> VM disk images and commercial installation media should normally
-> remain outside Git repositories unless redistribution is permitted.
+<img width="1517" height="812" alt="image" src="https://github.com/user-attachments/assets/5c087b15-d955-47b6-a6d6-a0ffb78d059e" />
+
 
 ## Long-Term Objectives
 
