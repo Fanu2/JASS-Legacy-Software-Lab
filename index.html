@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#070b14">
+<title>JASS Legacy Software Lab — JASS</title>
+<style>
+:root {
+  --bg:#070b14; --panel:#0d1422; --panel2:#111a2b; --text:#eef4ff;
+  --muted:#9aa9bf; --line:#203047; --accent:#60a5fa;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+background:radial-gradient(circle at 80% 5%, color-mix(in srgb,var(--accent) 13%,transparent), transparent 30%),var(--bg);
+color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92%);margin:auto}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand{font-weight:800;letter-spacing:.08em;font-size:.9rem}
+.brand span{color:var(--accent)}
+.navlink{color:var(--muted);font-size:.9rem}
+.hero{padding:110px 0 90px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;
+right:-170px;top:20px;background:var(--accent);opacity:.07;filter:blur(20px)}
+.eyebrow{color:var(--accent);font-size:.78rem;font-weight:800;letter-spacing:.18em;margin-bottom:22px}
+h1{font-size:clamp(3rem,8vw,6.4rem);line-height:.95;letter-spacing:-.065em;max-width:950px}
+.lead{font-size:clamp(1.15rem,2vw,1.5rem);color:#d3dbea;max-width:780px;margin:30px 0 18px}
+.desc{color:var(--muted);max-width:760px;font-size:1rem}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.btn{padding:12px 18px;border:1px solid var(--line);border-radius:10px;background:var(--panel);font-weight:700}
+.btn.primary{background:var(--accent);color:#07100d;border-color:var(--accent)}
+.section{padding:78px 0;border-top:1px solid var(--line)}
+.kicker{color:var(--accent);font-size:.75rem;font-weight:800;letter-spacing:.16em;margin-bottom:12px}
+h2{font-size:clamp(2rem,4vw,3.3rem);letter-spacing:-.04em;margin-bottom:14px}
+.section-intro{color:var(--muted);max-width:700px;margin-bottom:35px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.card{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);
+border-radius:18px;padding:28px;min-height:210px;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--accent) 55%,var(--line))}
+.num{color:var(--accent);font-size:.75rem;font-weight:900;letter-spacing:.12em;margin-bottom:35px}
+.card h3{font-size:1.25rem;margin-bottom:9px}
+.card p{color:var(--muted)}
+.pillbox{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.badge{border:1px solid var(--line);background:var(--panel);padding:7px 11px;border-radius:999px;color:#c9d4e7;font-size:.85rem}
+.mission{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.statement{font-size:clamp(1.7rem,3vw,2.7rem);line-height:1.15;letter-spacing:-.035em}
+.quote{border-left:3px solid var(--accent);padding-left:24px;color:#c5d0e2}
+footer{padding:35px 0;color:#718198;border-top:1px solid var(--line);font-size:.85rem;
+display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:720px){.hero{padding:75px 0}.grid,.mission{grid-template-columns:1fr}nav{height:64px}.navlink{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><div class="brand">JASS <span>/</span> SOFTWARE LAB</div><a class="navlink" href="#features">Explore project ↓</a></nav>
+
+<header class="hero">
+<div class="eyebrow">JASS • SOFTWARE ARCHAEOLOGY</div>
+<h1>JASS • LEGACY LAB</h1>
+<p class="lead">Preserve the past. Understand the data. Build the bridge to tomorrow.</p>
+<p class="desc">A practical software laboratory for preserving, exploring and modernizing legacy applications, databases and workflows — from FoxPro and dBase to modern Python and SQL systems.</p>
+<div class="actions">
+<a class="btn primary" href="https://github.com/Fanu2">View GitHub</a>
+<a class="btn" href="#features">Explore Features</a>
+</div>
+</header>
+
+<section class="section" id="features">
+<div class="kicker">THE WORKSPACE</div>
+<h2>Built for practical work.</h2>
+<p class="section-intro">A focused project designed around clarity, maintainability and useful software rather than unnecessary complexity.</p>
+<div class="grid"><article class="card"><div class="num">01</div><h3>Legacy Environments</h3><p>Explore historical software ecosystems such as DOS, Windows 9x, dBase and FoxPro.</p></article><article class="card"><div class="num">02</div><h3>Data Archaeology</h3><p>Inspect and recover value from DBF and other long-lived business data formats.</p></article><article class="card"><div class="num">03</div><h3>Modern Bridges</h3><p>Connect legacy data and workflows with Python, SQLite, PostgreSQL and modern desktop tools.</p></article><article class="card"><div class="num">04</div><h3>Preservation Lab</h3><p>Keep old systems understandable, reproducible and useful while planning modernization.</p></article></div>
+</section>
+
+<section class="section">
+<div class="mission">
+<div>
+<div class="kicker">TECHNOLOGY</div>
+<h2>The stack.</h2>
+<p class="section-intro">A lightweight, developer-friendly foundation intended for real-world experimentation and dependable desktop workflows.</p>
+<div class="pillbox"><span class="badge">Python</span><span class="badge">PySide6</span><span class="badge">FoxPro</span><span class="badge">dBase</span><span class="badge">DBF</span><span class="badge">SQL</span></div>
+</div>
+<div class="quote">
+<p class="statement">“Treat legacy software as valuable institutional knowledge — not disposable history.”</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="kicker">JASS SOFTWARE LAB</div>
+<h2>Research becomes software.</h2>
+<p class="section-intro">The JASS ecosystem turns practical ideas, old data, open resources and domain-specific workflows into focused software projects — with an emphasis on local control and long-term usefulness.</p>
+</section>
+
+<footer><span>© 2026 JASS Software Lab</span><span>Built with Python • Research • Curiosity</span></footer>
+</div>
+</body>
+</html>
